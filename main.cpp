@@ -7,17 +7,17 @@ DigitalOut DigOut2(p25);
 
 int main() {
   while(1) {
-   if(DigIn1 = 1) {
-    DigOut1 = 1;
-    DigOut2 = 0;
+   if(DigIn1.read() == 1) {
+    DigOut1.write(1);
+    DigOut2.write(0);
    }
-   else if(DigIn2 = 1){
-    DigOut1 = 0;
-    DigOut2 = 1;
+   else if(DigIn2.read() == 1){
+    DigOut1.write(0);
+    DigOut2.write(1);
    }
    else {
-    DigOut1 = 0;
-    DigOut2 = 0;
+    DigOut1.write(0);
+    DigOut2.write(0);
      }
    }
 }
